@@ -1,4 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Component } from 'react';
+
+class ErrorBoundary extends Component {
+  state = { error: null };
+  static getDerivedStateFromError(error) { return { error }; }
+  render() {
+    if (this.state.error) {
+      return (
+        <div className="min-h-screen bg-[#020617] flex items-center justify-center p-8">
+          <div className="max-w-2xl w-full bg-red-900/20 border border-red-500/30 rounded-2xl p-8">
+            <h2 className="text-red-400 text-xl font-black mb-4">⚠ Błąd renderowania AnkerDashboard</h2>
+            <pre className="text-red-300 text-sm whitespace-pre-wrap break-all">{this.state.error.message}</pre>
+            <pre className="text-red-600 text-xs mt-4 whitespace-pre-wrap break-all">{this.state.error.stack}</pre>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 import { supabase } from '../lib/supabase';
 import {
   Activity, Package, BarChart3, Clock, Cpu, CheckCircle2,
@@ -446,4 +465,10 @@ const StatCard = ({ title, value, icon, color, raw }) => {
   );
 };
 
-export default AnkerDashboard;
+const AnkerDashboardWithBoundary = (props) => (
+  <ErrorBoundary>
+    <AnkerDashboard {...props} />
+  </ErrorBoundary>
+);
+
+export default AnkerDashboardWithBoundary;
