@@ -52,12 +52,21 @@ const AnkerDashboard = ({ onBack }) => {
   const [filterStartDate, setFilterStartDate] = useState('');
   const [filterEndDate, setFilterEndDate] = useState('');
 
+  const [diagMsg, setDiagMsg] = useState('init');
+
   useEffect(() => {
-    fetchData();
-    const sub = supabase.channel('anker-updates')
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'anker_batches' }, fetchData)
-      .subscribe();
-    return () => supabase.removeChannel(sub);
+    setDiagMsg('effect-start');
+    fetchData().then(() => setDiagMsg('fetchData-done')).catch(e => setDiagMsg('fetchData-error: ' + e.message));
+    let sub;
+    try {
+      sub = supabase.channel('anker-updates')
+        .on('postgres_changes', { event: '*', schema: 'public', table: 'anker_batches' }, fetchData)
+        .subscribe();
+      setDiagMsg('channel-ok');
+    } catch(e) {
+      setDiagMsg('channel-error: ' + e.message);
+    }
+    return () => { try { if (sub) supabase.removeChannel(sub); } catch(_) {} };
   }, [filterMachine, filterPeriod, filterShift, filterStartDate, filterEndDate]);
 
   const fetchData = async () => {
@@ -175,6 +184,11 @@ const AnkerDashboard = ({ onBack }) => {
 
   return (
     <div className="min-h-screen bg-[#020617] text-slate-200 animate-fade-in">
+      {/* DIAGNOSTIC BAR */}
+      <div style={{position:'fixed',top:0,left:0,right:0,zIndex:9999,background:'#dc2626',color:'white',padding:'8px 16px',fontSize:'12px',fontFamily:'monospace',fontWeight:'bold'}}>
+        DIAG: {diagMsg} | loading={String(loading)} | batches={batches.length} | totalItems={stats.totalItems}
+      </div>
+      <div style={{height:'32px'}} />
       {/* History Modal */}
       {showHistory && (
         <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
