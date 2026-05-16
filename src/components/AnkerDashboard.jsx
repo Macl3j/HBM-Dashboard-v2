@@ -329,7 +329,7 @@ const AnkerDashboard = ({ onBack }) => {
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <StatCard title="Łącznie Sztuk" value={stats.totalItems} icon={<Package className="w-6 h-6" />} color="blue" />
-          <StatCard title="Szacowana Masa (BDO)" value={`${stats.totalWeight.toFixed(2)} t`} icon={<Database className="w-6 h-6" />} color="green" raw />
+          <StatCard title="Szacowana Masa (BDO)" value={`${stats.totalWeight} t`} icon={<Database className="w-6 h-6" />} color="green" raw />
           <StatCard title="Sztuk / Minuta" value={stats.itemsPerMin} icon={<Zap className="w-6 h-6" />} color="indigo" />
           <StatCard title="Sztuk / Zmiana (7h)" value={stats.itemsPerShift} icon={<TrendingUp className="w-6 h-6" />} color="slate" />
           <StatCard title="Worki / Zmiana (7h)" value={stats.bagsPerShift} icon={<Package className="w-6 h-6" />} color="blue" />
