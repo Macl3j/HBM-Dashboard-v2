@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
-import { 
+import {
   Activity, Package, BarChart3, Clock, Cpu, CheckCircle2,
   Zap, TrendingUp, LayoutDashboard, Database, ArrowRight,
   RefreshCw, List, X, ChevronLeft, ChevronRight
@@ -9,9 +9,9 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 
 const AnkerDashboard = ({ onBack }) => {
   const [batches, setBatches] = useState([]);
-  const [stats, setStats] = useState({ 
-    totalItems: 0, 
-    totalWeight: 0, 
+  const [stats, setStats] = useState({
+    totalItems: 0,
+    totalWeight: 0,
     activeMachines: 0,
     itemsPerMin: 0,
     itemsPerShift: 0,
@@ -27,8 +27,8 @@ const AnkerDashboard = ({ onBack }) => {
   const PAGE_SIZE = 15;
 
   // NEW FILTER STATES
-  const [filterMachine, setFilterMachine] = useState('all'); 
-  const [filterPeriod, setFilterPeriod] = useState('all'); 
+  const [filterMachine, setFilterMachine] = useState('all');
+  const [filterPeriod, setFilterPeriod] = useState('all');
   const [filterShift, setFilterShift] = useState('all');
   const [filterStartDate, setFilterStartDate] = useState('');
   const [filterEndDate, setFilterEndDate] = useState('');
@@ -139,13 +139,6 @@ const AnkerDashboard = ({ onBack }) => {
     } finally {
       setSyncing(false);
     }
-  };
-  const fetchHistory = async () => {
-    const { data } = await supabase.from('anker_batches')
-      .select('*')
-      .order('start_time', { ascending: false })
-      .limit(20000);
-    setAllBatches(data || []);
   };
 
   const openHistory = () => { fetchHistory(); setShowHistory(true); setHistPage(0); };
@@ -293,18 +286,18 @@ const AnkerDashboard = ({ onBack }) => {
                 {p.label}
               </button>
             ))}
-            
+
             {filterPeriod === 'custom' && (
               <div className="flex items-center gap-2 ml-4 animate-fade-in">
-                <input 
-                  type="date" 
+                <input
+                  type="date"
                   value={filterStartDate}
                   onChange={(e) => setFilterStartDate(e.target.value)}
                   className="bg-slate-800 border border-white/10 rounded-lg px-2 py-1 text-[10px] font-bold text-white focus:outline-none focus:border-blue-500 transition"
                 />
                 <span className="text-slate-500 text-[10px] font-black">—</span>
-                <input 
-                  type="date" 
+                <input
+                  type="date"
                   value={filterEndDate}
                   onChange={(e) => setFilterEndDate(e.target.value)}
                   className="bg-slate-800 border border-white/10 rounded-lg px-2 py-1 text-[10px] font-bold text-white focus:outline-none focus:border-blue-500 transition"
