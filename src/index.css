@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --font-outfit: "Outfit", sans-serif;
+  
+  /* Nadpisujemy kolory na HEX, aby html2canvas (który nie wspiera oklch) mógł je sparsować */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+
+  --color-emerald-600: #059669;
+  --color-emerald-700: #047857;
+
+  --color-indigo-600: #4f46e5;
+  --color-indigo-700: #4338ca;
+
+  --color-orange-400: #fb923c;
+  --color-orange-500: #f97316;
+
+  --color-green-400: #4ade80;
+  --color-green-500: #22c55e;
+
+  --color-red-400: #f87171;
+  --color-red-500: #ef4444;
+}
+
+@layer base {
+  body {
+    background-color: #020617; /* Explicit HEX */
+    color: #f8fafc; /* Explicit HEX */
+    font-family: theme('fontFamily.outfit');
+    min-height: 100vh;
+    /* Używamy tylko RGBA dla gradientów, unikamy słowa 'transparent' i oklch */
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(30, 58, 138, 0.15) 0px, rgba(30, 58, 138, 0) 50%),
+      radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.1) 0px, rgba(139, 92, 246, 0) 50%);
+  }
+}
+
+.glass {
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glass:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.05);
+}
+
+.text-glow-blue { text-shadow: 0 0 10px rgba(59, 130, 246, 0.5); }
+.text-glow-green { text-shadow: 0 0 10px rgba(16, 185, 129, 0.5); }
+
+/* Poprawki dla eksportu PDF - usuwamy filtry i animacje które psują html2canvas */
+.pdf-export-active * {
+  transition: none !important;
+  animation: none !important;
+  backdrop-filter: none !important;
+  /* Wymuszamy aby kolory nie były oklch/oklab poprzez resetowanie do standardowych wartości */
+}
+
+.pdf-export-active .glass {
+  background-color: #0f172a !important; /* Ciemny granat zamiast przezroczystości */
+  backdrop-filter: none !important;
+}

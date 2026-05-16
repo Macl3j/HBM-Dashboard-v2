@@ -1,0 +1,16 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "crons": [
+    {
+      "path": "/api/ingest-anker",
+      "schedule": "*/30 * * * *"
+    }
+  ],
+  "functions": {
+    "api/ingest-anker.js": {
+      "maxDuration": 120
+    }
+  }
+}

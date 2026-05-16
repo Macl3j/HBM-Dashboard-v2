@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tns:Faktura xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://crd.gov.pl/wzor/2025/06/25/13775/">
+  <tns:Naglowek>
+    <tns:KodFormularza kodSystemowy="FA (3)" wersjaSchemy="1-0E">FA</tns:KodFormularza>
+    <tns:WariantFormularza>3</tns:WariantFormularza>
+    <tns:DataWytworzeniaFa>2026-03-24T09:20:21+01:00</tns:DataWytworzeniaFa>
+    <tns:SystemInfo>Subiekt GT 1.8720.20.6898</tns:SystemInfo>
+  </tns:Naglowek>
+  <tns:Podmiot1>
+    <tns:DaneIdentyfikacyjne>
+      <tns:NIP>9151781879</tns:NIP>
+      <tns:Nazwa>PETRO-LAWA SP. Z O.O.</tns:Nazwa>
+    </tns:DaneIdentyfikacyjne>
+    <tns:Adres>
+      <tns:KodKraju>PL</tns:KodKraju>
+      <tns:AdresL1>Jaworowa 1</tns:AdresL1>
+      <tns:AdresL2>55-140 Dębno</tns:AdresL2>
+    </tns:Adres>
+    <tns:DaneKontaktowe>
+      <tns:Email>petro-krzyzowniki@wp.pl</tns:Email>
+      <tns:Telefon>609-404-002</tns:Telefon>
+    </tns:DaneKontaktowe>
+  </tns:Podmiot1>
+  <tns:Podmiot2>
+    <tns:DaneIdentyfikacyjne>
+      <tns:NIP>7771451508</tns:NIP>
+      <tns:Nazwa>ZBIGNIEW SUSZKA PRZEDSIĘBIORSTWO WIELOBRANŻOWE 
+"ZIBI-SPEDTRANS"</tns:Nazwa>
+    </tns:DaneIdentyfikacyjne>
+    <tns:Adres>
+      <tns:KodKraju>PL</tns:KodKraju>
+      <tns:AdresL1>Dworcowa 2C</tns:AdresL1>
+      <tns:AdresL2>62-050 Mosina</tns:AdresL2>
+    </tns:Adres>
+    <tns:JST>2</tns:JST>
+    <tns:GV>2</tns:GV>
+  </tns:Podmiot2>
+  <tns:Fa>
+    <tns:KodWaluty>PLN</tns:KodWaluty>
+    <tns:P_1>2026-03-24</tns:P_1>
+    <tns:P_1M>Krzyżowniki</tns:P_1M>
+    <tns:P_2>FS 1235/KRZ/03/2026</tns:P_2>
+    <tns:WZ>WZ 2493/KRZ/03/2026</tns:WZ>
+    <tns:P_13_1>7000</tns:P_13_1>
+    <tns:P_14_1>1610</tns:P_14_1>
+    <tns:P_15>8610</tns:P_15>
+    <tns:Adnotacje>
+      <tns:P_16>2</tns:P_16>
+      <tns:P_17>2</tns:P_17>
+      <tns:P_18>2</tns:P_18>
+      <tns:P_18A>2</tns:P_18A>
+      <tns:Zwolnienie>
+        <tns:P_19N>1</tns:P_19N>
+      </tns:Zwolnienie>
+      <tns:NoweSrodkiTransportu>
+        <tns:P_22N>1</tns:P_22N>
+      </tns:NoweSrodkiTransportu>
+      <tns:P_23>2</tns:P_23>
+      <tns:PMarzy>
+        <tns:P_PMarzyN>1</tns:P_PMarzyN>
+      </tns:PMarzy>
+    </tns:Adnotacje>
+    <tns:RodzajFaktury>VAT</tns:RodzajFaktury>
+    <tns:FaWiersz>
+      <tns:NrWierszaFa>1</tns:NrWierszaFa>
+      <tns:UU_ID>0F7746EE97954876A0E0FFD0C8D6D73E</tns:UU_ID>
+      <tns:P_7> OLEJ NAPĘDOWY   B7              CN27102011</tns:P_7>
+      <tns:Indeks>UN 1202 Paliwo.....3, PG III (D/E) ZAGRAŻAJĄCY ŚRO</tns:Indeks>
+      <tns:GTIN>0000000455</tns:GTIN>
+      <tns:P_8A>L</tns:P_8A>
+      <tns:P_8B>1000</tns:P_8B>
+      <tns:P_9A>7</tns:P_9A>
+      <tns:P_9B>8.61</tns:P_9B>
+      <tns:P_11>7000</tns:P_11>
+      <tns:P_11A>8610</tns:P_11A>
+      <tns:P_12>23</tns:P_12>
+      <tns:P_12_Zal_15>1</tns:P_12_Zal_15>
+      <tns:GTU>GTU_02</tns:GTU>
+    </tns:FaWiersz>
+    <tns:Platnosc>
+      <tns:TerminPlatnosci>
+        <tns:Termin>2026-04-14</tns:Termin>
+      </tns:TerminPlatnosci>
+      <tns:FormaPlatnosci>6</tns:FormaPlatnosci>
+      <tns:RachunekBankowy>
+        <tns:NrRB>68102052260000610208300453</tns:NrRB>
+        <tns:NazwaBanku>PKO BP S.A. - Oddział 1 we Wrocławiu</tns:NazwaBanku>
+        <tns:OpisRachunku>PLN</tns:OpisRachunku>
+      </tns:RachunekBankowy>
+    </tns:Platnosc>
+    <tns:WarunkiTransakcji>
+      <tns:Zamowienia>
+        <tns:DataZamowienia>2026-03-24</tns:DataZamowienia>
+        <tns:NrZamowienia>ZK 2516/KRZ/03/2026</tns:NrZamowienia>
+      </tns:Zamowienia>
+    </tns:WarunkiTransakcji>
+  </tns:Fa>
+  <tns:Stopka>
+    <tns:Informacje>
+      <tns:StopkaFaktury>SENT20260323005679
+Klucz podmiotu odbierającego: KR-96ET</tns:StopkaFaktury>
+    </tns:Informacje>
+    <tns:Rejestry>
+      <tns:PelnaNazwa>PETRO-LAWA SP. Z O.O.</tns:PelnaNazwa>
+      <tns:REGON>021550431</tns:REGON>
+    </tns:Rejestry>
+  </tns:Stopka>
+</tns:Faktura>

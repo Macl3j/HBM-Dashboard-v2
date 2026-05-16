@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Faktura xmlns:etd="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2022/01/05/eD/DefinicjeTypy/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://crd.gov.pl/wzor/2025/06/25/13775/">
+  <Naglowek>
+    <KodFormularza kodSystemowy="FA (3)" wersjaSchemy="1-0E">FA</KodFormularza>
+    <WariantFormularza>3</WariantFormularza>
+    <DataWytworzeniaFa>2026-04-03T15:54:50.9302788+02:00</DataWytworzeniaFa>
+  </Naglowek>
+  <Podmiot1>
+    <DaneIdentyfikacyjne>
+      <NIP>8762162975</NIP>
+      <Nazwa>HDIJ
+Dorota Jarosz</Nazwa>
+    </DaneIdentyfikacyjne>
+    <Adres>
+      <KodKraju>PL</KodKraju>
+      <AdresL1>Tulipanowa 48</AdresL1>
+      <AdresL2>86-300 Grudziądz</AdresL2>
+    </Adres>
+  </Podmiot1>
+  <Podmiot2>
+    <DaneIdentyfikacyjne>
+      <NIP>7771451508</NIP>
+      <Nazwa>ZBIGNIEW SUSZKA PRZEDSIĘBIORSTWO WIELOBRANŻOWE "ZIBI-SPEDTRANS"</Nazwa>
+    </DaneIdentyfikacyjne>
+    <Adres>
+      <KodKraju>PL</KodKraju>
+      <AdresL1>ul. Dworcowa 2C</AdresL1>
+      <AdresL2>62-050 Mosina</AdresL2>
+    </Adres>
+    <JST>2</JST>
+    <GV>2</GV>
+  </Podmiot2>
+  <Fa>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2026-04-02</P_1>
+    <P_1M>Grudziądz</P_1M>
+    <P_2>204/2026</P_2>
+    <P_6>2026-04-01</P_6>
+    <P_13_1>3450</P_13_1>
+    <P_14_1>793.5</P_14_1>
+    <P_15>4243.5</P_15>
+    <Adnotacje>
+      <P_16>2</P_16>
+      <P_17>2</P_17>
+      <P_18>2</P_18>
+      <P_18A>2</P_18A>
+      <Zwolnienie>
+        <P_19N>1</P_19N>
+      </Zwolnienie>
+      <NoweSrodkiTransportu>
+        <P_22N>1</P_22N>
+      </NoweSrodkiTransportu>
+      <P_23>2</P_23>
+      <PMarzy>
+        <P_PMarzyN>1</P_PMarzyN>
+      </PMarzy>
+    </Adnotacje>
+    <RodzajFaktury>VAT</RodzajFaktury>
+    <FaWiersz>
+      <NrWierszaFa>1</NrWierszaFa>
+      <P_7>Zlecenie transportowe NR 136/03/2026</P_7>
+      <P_8B>1</P_8B>
+      <P_9A>1650</P_9A>
+      <P_11>1650</P_11>
+      <P_12>23</P_12>
+      <GTU>GTU_13</GTU>
+    </FaWiersz>
+    <FaWiersz>
+      <NrWierszaFa>2</NrWierszaFa>
+      <P_7>Zlecenie transportowe NR 137/03/2026</P_7>
+      <P_8B>1</P_8B>
+      <P_9A>1800</P_9A>
+      <P_11>1800</P_11>
+      <P_12>23</P_12>
+      <GTU>GTU_13</GTU>
+    </FaWiersz>
+    <Platnosc>
+      <TerminPlatnosci>
+        <Termin>2026-05-17</Termin>
+      </TerminPlatnosci>
+      <FormaPlatnosci>6</FormaPlatnosci>
+      <RachunekBankowy>
+        <NrRB>PL11102050400000600202072080</NrRB>
+        <NazwaBanku>PKO BP</NazwaBanku>
+      </RachunekBankowy>
+    </Platnosc>
+  </Fa>
+  <Stopka>
+    <Rejestry>
+      <PelnaNazwa>HDIJ
+Dorota Jarosz</PelnaNazwa>
+      <REGON>382343184</REGON>
+    </Rejestry>
+  </Stopka>
+</Faktura>
